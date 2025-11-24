@@ -1,2 +1,3 @@
-global_foo_label malloc
-global_foo_label asignarNivelesParaNuevosUsuarios
+global_foo_label free
+global_foo_label strcmp
+global_foo_label removerCopias
