@@ -79,7 +79,7 @@ trendingTopic:
 
     .finloopcant:
         test r13, r13
-        jz .epilogo
+        jz .null
 
         mov rdi, TUIT_SIZE
         imul rdi, r13
@@ -122,6 +122,10 @@ trendingTopic:
     .itloopsobresalientes:
         mov r14, [r14 + PUBLICACION_NEXT_OFFSET]
         jmp .loopsobresalientes
+
+    .null:
+        xor rax, rax
+        jmp .epilogo
 
     .notnull:
         mov QWORD [r15 + r10*8], 0
